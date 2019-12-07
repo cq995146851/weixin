@@ -1,0 +1,28 @@
+{{extend name="public/container"}}
+
+{{block name="title"}}首页{{/block}}
+
+{{block name="content"}}
+<header class="hui-header">
+    <div id="hui-back"></div>
+    <h1>首页</h1>
+</header>
+<div class="hui-wrap">
+    <div class="hui-swipe" id="swipe">
+        <div class="hui-swipe-items">
+            <div class="hui-swipe-item"><img src="__WAP_PATH__/hui/img/swipe/1.jpg"/></div>
+            <div class="hui-swipe-item"><img src="__WAP_PATH__/hui/img/swipe/2.jpg"/></div>
+            <div class="hui-swipe-item"><img src="__WAP_PATH__/hui/img/swipe/3.jpg"/></div>
+            <div class="hui-swipe-item"><img src="__WAP_PATH__/hui/img/swipe/4.jpg"/></div>
+        </div>
+    </div>
+</div>
+{{/block}}
+{{block name="foot"}}
+<script src="__WAP_PATH__/hui/js/hui-swipe.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  var swipe = new huiSwipe('#swipe');
+  swipe.autoPlay = true;
+  swipe.run();
+</script>
+{{/block}}
